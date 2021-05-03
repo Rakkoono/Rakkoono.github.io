@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin%20Sans');
+
+/**=====================**/
+/** VARIABLES           **/
+/**=====================**/
+
+:root {
+    /* Colors: */
+    --background-color: #13263d;
+    --symbol-color:     #b5d8e8;
+    --highlight-color:  #36b8e9;
+    --header-color:     #214772;
+    --hover-color:      #ffffff;
+}
+
+/**=====================**/
+/** BY TYPE             **/
+/**=====================**/
+
+/* Global */
+html, body {
+    /* Formatting */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+    /* Text */
+    color: var(--symbol-color);
+    font-family: 'Josefin Sans', sans-serif;
+
+    /* Background */
+    background-color: var(--background-color);
+}
+
+/* Paragraph */
+p {
+    color: var(--symbol-color);
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Header */
+h1, h2, h3, h4 {
+    color: var(--symbol-color);
+
+    font-variant: small-caps;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Link */
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: var(--highlight-color);
+}
+
+/**=====================**/
+/** BY CLASS            **/
+/**=====================**/
+
+/* Hidden link */
+a.hidden-link:link,
+a.hidden-link:visited,
+a.hidden-link:hover,
+a.hidden-link:active {
+    color: var(--symbol-color);
+    text-decoration: none;
+}
+
+/* Alignment */
+.align-right { text-align: right; }
+.align-left { text-align: left; }
+.align-center { text-align: center; }
+
+/* Border */
+.border { border: 2px solid var(--symbol-color); }
+.border-l { border-left: 2px solid var(--symbol-color); }
+.border-r { border-right: 2px solid var(--symbol-color); }
+.border-v { border-left: 2px solid var(--symbol-color); border-right: 2px solid var(--symbol-color); }
+.border-t { border-top: 2px solid var(--symbol-color); }
+.border-b { border-bottom: 2px solid var(--symbol-color); }
+.border-h > .border-t.b { border-top: 2px solid var(--symbol-color); border-bottom: 2px solid var(--symbol-color); }
+
+.title {
+    font-variant: small-caps;
+    flex-grow: 1;
+    line-height: 1em;
+    margin: 5px;
+    color: var(--symbol-color);
+}
+
+/* Icon: */
+.icon {
+    display:block;
+    width: 50px;
+    height: 50px;
+    background: var(--symbol-color);
+}
+/* Icons: Github, Itch.io, Trello, Twitter */
+.icon-github { mask: url(../images/icons/github.svg); }
+.icon-itch-dot-io { mask: url(../images/icons/itch-dot-io.svg); }
+.icon-trello { mask: url(../images/icons/trello.svg); }
+.icon-twitter { mask: url(../images/icons/twitter.svg); }
+
+/* Button */
+.btn {
+    font-variant:small-caps;
+    padding: 8px;
+    align-self: center;
+}
+a.btn:hover { color: var(--hover-color); }
+
+/* Button /w Icon */
+a.btn:hover > .icon { background-color: var(--hover-color); }
+
+/**=====================**/
+/** BY ID               **/
+/**=====================**/
+
+/* Header */
+#header {
+    display: flex;
+    align-items: center;
+    padding: 1px;
+    width: 100%;
+    background-color: var(--header-color);
+}
+
+/* Wrapper */
+#wrapper {
+    margin: 15px, 15px;
+}

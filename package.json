@@ -1,0 +1,19 @@
+{
+  "name": "rakkoono.github.io",
+  "version": "1.0.0",
+  "description": "Rakkoon Games Website",
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rakkoono/Rakkoono.github.io.git"
+  },
+  "author": "Samuel Birth",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Rakkoono/Rakkoono.github.io/issues"
+  },
+  "homepage": "https://github.com/Rakkoono/Rakkoono.github.io#readme",
+  "devDependencies": {
+    "@types/jquery": "^3.5.5"
+  }
+}
