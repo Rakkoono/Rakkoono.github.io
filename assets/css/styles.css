@@ -27,7 +27,7 @@ html, body {
     /* Text */
     color: var(--symbol-color);
     font-family: 'Josefin Sans', sans-serif;
-
+    
     /* Background */
     background-color: var(--background-color);
 }
@@ -41,7 +41,6 @@ p {
 /* Header */
 h1, h2, h3, h4 {
     color: var(--symbol-color);
-
     font-variant: small-caps;
     font-family: 'Josefin Sans', sans-serif;
 }
@@ -52,6 +51,14 @@ a:visited,
 a:hover,
 a:active {
     color: var(--highlight-color);
+}
+
+/* Simple Icons: https://simpleicons.org, src/utils/SimpleIcon.ts */
+simple-icon {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: var(--symbol-color);
 }
 
 /**=====================**/
@@ -79,39 +86,36 @@ a.hidden-link:active {
 .border-v { border-left: 2px solid var(--symbol-color); border-right: 2px solid var(--symbol-color); }
 .border-t { border-top: 2px solid var(--symbol-color); }
 .border-b { border-bottom: 2px solid var(--symbol-color); }
-.border-h > .border-t.b { border-top: 2px solid var(--symbol-color); border-bottom: 2px solid var(--symbol-color); }
+.border-h { border-top: 2px solid var(--symbol-color); border-bottom: 2px solid var(--symbol-color); }
 
 .title {
     font-variant: small-caps;
     flex-grow: 1;
     line-height: 1em;
-    margin: 5px;
+    margin: 0 5px;
     color: var(--symbol-color);
 }
-
-/* Icon: */
-.icon {
-    display:block;
-    width: 50px;
-    height: 50px;
-    background: var(--symbol-color);
-}
-/* Icons: Github, Itch.io, Trello, Twitter */
-.icon-github { mask: url(../images/icons/github.svg); }
-.icon-itch-dot-io { mask: url(../images/icons/itch-dot-io.svg); }
-.icon-trello { mask: url(../images/icons/trello.svg); }
-.icon-twitter { mask: url(../images/icons/twitter.svg); }
 
 /* Button */
 .btn {
     font-variant:small-caps;
     padding: 8px;
     align-self: center;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
 }
 a.btn:hover { color: var(--hover-color); }
 
 /* Button /w Icon */
-a.btn:hover > .icon { background-color: var(--hover-color); }
+a.btn:hover > simple-icon { background-color: var(--hover-color); }
+
+/* Button List */
+.btnl {
+    display: flex;
+    align-items: center;
+    padding: 1px;
+}
 
 /**=====================**/
 /** BY ID               **/
@@ -120,6 +124,7 @@ a.btn:hover > .icon { background-color: var(--hover-color); }
 /* Header */
 #header {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     padding: 1px;
     width: 100%;
