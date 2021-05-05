@@ -1,5 +1,5 @@
 "use strict";
 /* This gets executed while the page loads */
 $(function () {
-    $("#header").load("assets/html/header.html");
+    $("#header").load("/assets/html/header.html");
 });
