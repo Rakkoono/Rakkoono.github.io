@@ -3,7 +3,7 @@ class SimpleIcon extends HTMLElement {
     constructor() {
         super();
 
-        this.style.cssText =
+        this.style.cssText = 
            `display: block;
             width: 50px;
             height: 50px;
@@ -14,7 +14,7 @@ class SimpleIcon extends HTMLElement {
         if (this.hasAttribute("name"))
         {
             let url: string = "url(" + this.iconsURL + this.getAttribute("name") + ")";
-            this.style.cssText = "-webkit-mask-image: " + url + "; mask-image: " + url + ";";
+            this.style.cssText += "-webkit-mask-image: " + url + "; mask-image: " + url + ";";
         }
     }
 }
