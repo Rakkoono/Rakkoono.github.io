@@ -1,22 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Josefin%20Sans');
-
-/**=====================**/
-/** VARIABLES           **/
-/**=====================**/
-
-:root {
-    /* Colors: */
-    --background-color:         #13263d;
-    --symbol-color:             #b5d8e8;
-    --symbol-hover-color:       #ffffff;
-    --highlight-color:          #36b8e9;
-    --highlight-hover-color:    #84d2ee;
-    --header-color:             #214772;
-
-    /* Fonts */
-    --font-family: 'Josefin Sans', sans-serif;
-}
-
 /**=====================**/
 /** BY TYPE             **/
 /**=====================**/
@@ -58,7 +39,7 @@ a:active {
     color: var(--highlight-color);
 }
 
-/* Simple Icons: https://simpleicons.org, src/utils/SimpleIcon.ts */
+/* Simple Icons: src/utils/SimpleIcon.ts */
 simple-icon {
     display: block;
     width: 50px;

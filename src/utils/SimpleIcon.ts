@@ -3,18 +3,24 @@ class SimpleIcon extends HTMLElement {
     constructor() {
         super();
 
-        this.style.cssText = 
-           `display: block;
-            width: 50px;
-            height: 50px;
+        $(this).css({
+            "display": "block",
+            "width": "50px",
+            "height": "50px",
+            "-webkit-mask-size": "100%",
+            "mask-size": "100%"
+        });
+    }
 
-            -webkit-mask-size: 100%; 
-            mask-size: 100%;`;
-        
-        if (this.hasAttribute("name"))
+    connectedCallback(): void {
+        let name: string | undefined = $(this).attr("name");
+        if (name != undefined)
         {
-            let url: string = "url(" + this.iconsURL + this.getAttribute("name") + ")";
-            this.style.cssText += "-webkit-mask-image: " + url + "; mask-image: " + url + ";";
+            let url: string = "url(" + this.iconsURL + name + ")";
+            $(this).css({
+                "-webkit-mask-image": url,
+                "mask-image": url
+            });
         }
     }
 }

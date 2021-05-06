@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin%20Sans');
+
+:root {
+    /* Colors: */
+    --background-color:         #13263d;
+    --header-color:             #214772;
+
+    --symbol-color:             #b5d8e8;
+    --symbol-hover-color:       #ffffff;
+
+    --highlight-color:          #36b8e9;
+    --highlight-hover-color:    #84d2ee;
+
+    /* Fonts */
+    --font-family: 'Josefin Sans', sans-serif;
+}
