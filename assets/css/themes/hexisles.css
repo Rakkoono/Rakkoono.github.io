@@ -2,8 +2,9 @@
 
 :root {
     /* Colors: */
-    --background-color:         #13263d;
     --header-color:             #214772;
+    --background-color:         #13263d;
+    --content-background-color: var(--background-color);
 
     --symbol-color:             #b5d8e8;
     --symbol-hover-color:       #ffffff;
@@ -12,5 +13,9 @@
     --highlight-hover-color:    #84d2ee;
 
     /* Fonts */
-    --font-family: 'Josefin Sans', sans-serif;
+    --font-family:              'Josefin Sans', sans-serif;
+
+    /* Images */
+    --background-image:         url(/assets/images/backgrounds/hexisles.png);
+    --content-background-image: none;
 }

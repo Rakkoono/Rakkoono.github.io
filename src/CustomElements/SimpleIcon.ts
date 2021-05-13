@@ -2,20 +2,19 @@ class SimpleIcon extends HTMLElement {
     iconsURL: string = "https://simpleicons.org/icons/";
     constructor() {
         super();
-
-        $(this).css({
-            "display": "block",
-            "width": "50px",
-            "height": "50px",
-            "-webkit-mask-size": "100%",
-            "mask-size": "100%"
-        });
     }
 
     connectedCallback(): void {
-        let name: string | undefined = $(this).attr("name");
-        if (name != undefined)
+        let attr: string | undefined = $(this).attr("name");
+        if (attr == undefined)
+            attr = $(this).attr("title");
+
+        if (attr != undefined)
         {
+            let name: string = attr.toLowerCase().replace(/\s+/g, "");
+            if (!name.includes("."))
+                name += ".svg";
+
             let url: string = "url(" + this.iconsURL + name + ")";
             $(this).css({
                 "-webkit-mask-image": url,

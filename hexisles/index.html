@@ -15,43 +15,89 @@
     <meta name="twitter:creator" content="@Rakkoono">
 
     <!--OG & general meta tags:-->
+    <meta property="og:url" content="https://rakkoon.github.io/hexisles">
     <meta property="og:site_name" content="Rakkoon Games">
     <meta property="og:title" content="HexIsles - Rakkoon Games">
-    <meta name="description" property="og:description" content="A hexagonal puzzle game developed by Rakkoon Games - Originally made for Brackey's Game Jam 2021.1.">
+    <meta name="description" property="og:description"
+        content="A hexagonal puzzle game developed by Rakkoon Games - Originally made for Brackey's Game Jam 2021.1.\nHelp the hexes reach their goal without leaving anyone behind! A little puzzle game about the hexagons life in exile.">
     <meta name="keywords" content="Rakkoon, Rakkoono, Games, HexIsles, Development">
     <meta name="author" content="Samuel Birth">
 
     <!--Icon reference:-->
-    <!--TODO link rel="shortcut icon" href="favicon.ico"-->
+    <link rel="shortcut icon" href="/assets/images/icons/hexisles.ico">
     <!--Stylesheet reference:-->
-    <link rel="stylesheet" href="/assets/css/themes/blue.css">
-    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/themes/hexisles.css">
+    <link rel="stylesheet" href="/assets/css/global-style.css">
     <!--Script reference:-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="/dist/main.js"></script>
-    <script src="/dist/utils/SimpleIcon.js"></script>
+    <script src="/dist/hexisles.js"></script>
+    <script src="/dist/CustomElements/SimpleIcon.js"></script>
 
     <!--Title-->
     <title>HexIsles - Rakkoon Games</title>
 </head>
 
 <body>
-    <div id="header"></div>
-    <div id="wrapper">
+    <div id="content">
+        <h1 class="align-center" style="font-size: 300%;">
+            <hr>HexIsles
+            <hr>
+        </h1>
+        <p>
+            Help the hexes reach their goal without leaving anyone behind! A little puzzle game about the hexagons
+            life in exile.
+        </p>
+        <h2 class="align-center">
+            <hr>Play for free on Itch.io
+            <hr>
+        </h2>
         <div class="align-center">
-            <h1>Work In Progress</h1>
-            <a href="https://github.com/Rakkoono/Rakkoono.github.io">Github Repository</a>
-            <br>
-
-            <!--Itch.io iFrame (https://itch.io/game/widget/922632)-->
-            <iframe
+            <h3 style="margin: 10px;">
+                <a href="/hexisles/play.html">
+                    Play in Browser
+                </a>
+            </h3>
+            <span class="nowrap">
+                <simple-icon class="inline-icon" name="Google Chrome"></simple-icon> Google Chrome
+            </span> |
+            <span class="nowrap">
+                <simple-icon class="inline-icon" name="Firefox Browser"></simple-icon> Firefox
+            </span> |
+            <span class="nowrap">
+                <simple-icon class="inline-icon" name="Safari"></simple-icon> Safari
+            </span> |
+            <span class="nowrap">
+                <simple-icon class="inline-icon" name="Microsoft Edge"></simple-icon> Microsoft Edge
+            </span> |
+            <span class="nowrap">
+                <simple-icon class="inline-icon" name="Opera"></simple-icon> Opera
+            </span>
+            <h3 style="margin: 10px;"><a class="smallcaps" href="https://rakkoon.itch.io/hexisles#download"
+                    target="_blank">Download</a></h3>
+            <span class="nowrap">
+                <simple-icon class="inline-icon" name="Windows"></simple-icon> Windows
+            </span> |
+            <span class="nowrap">
+                <simple-icon class="inline-icon" name="Apple"></simple-icon> macOS
+            </span> |
+            <span class="nowrap">
+                <simple-icon class="inline-icon" name="Linux"></simple-icon> Linux
+            </span> |
+            <span class="nowrap">
+                <simple-icon class="inline-icon" name="Android"></simple-icon> Android
+            </span>
+        </div>
+        <p class="align-center">
+            <!--Itch.io Widget (https://itch.io/game/widget/922632)-->
+            <iframe id="itch-widget"
                 src="https://itch.io/embed/922632?bg_color=13263d&amp;fg_color=b5d8e8&amp;link_color=36b8e9&amp;border_color=36b8e9"
-                width="552" height="167" frameborder="0">
+                width="552" height="168" frameborder="0">
                 <a href="https://rakkoon.itch.io/hexisles">
                     HexIsles by Rakkoon
                 </a>
             </iframe>
-        </div>
+        </p>
     </div>
 </body>
 

@@ -2,8 +2,9 @@
 
 :root {
     /* Colors: */
-    --background-color:         #3d1313;
     --header-color:             #722121;
+    --background-color:         #3d1313;
+    --content-background-color: transparent;
 
     --symbol-color:             #e8b5b5;
     --symbol-hover-color:       #ffffff;
@@ -12,5 +13,9 @@
     --highlight-hover-color:    #ee8484;
 
     /* Fonts */
-    --font-family: 'Josefin Sans', sans-serif;
+    --font-family:              'Josefin Sans', sans-serif;
+
+    /* Images */
+    --background-image:         none;
+    --content-background-image: none;
 }

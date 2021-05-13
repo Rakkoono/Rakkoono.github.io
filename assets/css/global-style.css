@@ -1,0 +1,291 @@
+/**=====================**/
+/** BY TYPE             **/
+/**=====================**/
+
+/* Global */
+html,
+body {
+    /* Formatting */
+    margin: 0;
+    padding: 0;
+
+    /* Background */
+    background-color: var(--background-color);
+    background-image: var(--background-image);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    /* Flex Display */
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+
+    /* Scrollbars */
+    overflow: hidden;
+
+    /* Text */
+    color: var(--symbol-color);
+    font-family: var(--font-family);
+    font-size: 1em;
+
+    /* Vertical scrollbar */
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    /* Hide scrollbars */
+    -ms-overflow-style: none; /* IE, Edge */
+    scrollbar-width: none; /* Firefox */
+}
+body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+/* Paragraph */
+p {
+    color: var(--symbol-color);
+    font-family: var(--font-family);
+}
+
+hr {
+    color: var(--symbol-color);
+    margin: 5px;
+}
+
+/* Header */
+h1,
+h2,
+h3,
+h4 {
+    color: var(--symbol-color);
+    font-variant: small-caps;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+/* Link */
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: var(--highlight-color);
+}
+
+/* Simple Icons: src/utils/SimpleIcon.ts */
+simple-icon {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: var(--symbol-color);
+    -webkit-mask-size: "100%";
+    mask-size: "100%";
+}
+
+/**=====================**/
+/** BY CLASS            **/
+/**=====================**/
+
+/* Alignment */
+.align-right {
+    text-align: right;
+}
+.align-left {
+    text-align: left;
+}
+.align-center {
+    text-align: center;
+}
+
+/* Border */
+.border {
+    border: 2px solid var(--symbol-color);
+}
+.border-l {
+    border-left: 2px solid var(--symbol-color);
+}
+.border-r {
+    border-right: 2px solid var(--symbol-color);
+}
+.border-v {
+    border-left: 2px solid var(--symbol-color);
+    border-right: 2px solid var(--symbol-color);
+}
+.border-t {
+    border-top: 2px solid var(--symbol-color);
+}
+.border-b {
+    border-bottom: 2px solid var(--symbol-color);
+}
+.border-h {
+    border-top: 2px solid var(--symbol-color);
+    border-bottom: 2px solid var(--symbol-color);
+}
+
+/* Flex display */
+.flex-c {
+    display: flex;
+    flex-direction: column;
+}
+.flex-cr {
+    display: flex;
+    flex-direction: column-reverse;
+}
+.flex-r {
+    display: flex;
+    flex-direction: row;
+}
+.flex-rr {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.flex-grow {
+    flex-grow: 1;
+}
+.flex-shrink {
+    flex-shrink: 1;
+}
+
+/* Whitespace Wrap */
+.nowrap {
+    white-space: nowrap;
+}
+
+/* Button */
+.btn {
+    color: var(--symbol-color);
+    text-decoration: none;
+    align-items: center;
+    padding: 8px;
+}
+a.btn:link,
+a.btn:visited,
+a.btn:active {
+    color: var(--symbol-color);
+}
+a.btn:hover {
+    color: var(--symbol-hover-color);
+}
+
+/* Button /w Icon */
+a.btn:hover > simple-icon {
+    background-color: var(--symbol-hover-color);
+}
+
+/* Absolute position */
+.abs-left {
+    position: absolute;
+    left: 0;
+}
+.abs-right {
+    position: absolute;
+    right: 0;
+}
+.abs-bottom {
+    position: absolute;
+    bottom: 0;
+}
+.abs-top {
+    position: absolute;
+    top: 0;
+}
+.abs-center-h {
+    left: 0;
+    right: 0;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    position: absolute;
+}
+.abs-center-v {
+    top: 0;
+    bottom: 0;
+
+    margin-top: auto;
+    margin-bottom: auto;
+
+    position: absolute;
+}
+.abs-center {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+
+    position: absolute;
+}
+
+/* Logo Text: Rakkoon GAMES */
+.logo-text {
+    margin: 0 3px;
+    line-height: 1em;
+    text-align: center;
+
+    font-variant: small-caps;
+    color: var(--symbol-color);
+}
+.logo-text > .btn {
+    padding: 0;
+}
+
+/* Inline Icons */
+.inline-icon {
+    display: inline-block;
+    height: 1em;
+    width: 1em;
+}
+
+/* Font Variants */
+.smallcaps {
+    font-variant: small-caps;
+}
+
+/**=====================**/
+/** BY ID               **/
+/**=====================**/
+
+/* Header */
+#header {
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    border: 0;
+    padding: 1px;
+    height: auto;
+    width: 100%;
+    background-color: var(--header-color);
+}
+
+/* Content */
+#content {
+    --min-margin: 15px;
+
+    align-items: center;
+    justify-content: center;
+
+    max-width: calc(100% - 2 * var(--min-margin));
+    width: min-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: var(--min-margin);
+    padding: 20px;
+
+    background-color: var(--content-background-color);
+    background-image: var(--content-background-image);
+    background-size: cover;
+    background-position: center;
+    background-attachment: local;
+}

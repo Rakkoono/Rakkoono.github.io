@@ -3,17 +3,15 @@ class SimpleIcon extends HTMLElement {
     constructor() {
         super();
         this.iconsURL = "https://simpleicons.org/icons/";
-        $(this).css({
-            "display": "block",
-            "width": "50px",
-            "height": "50px",
-            "-webkit-mask-size": "100%",
-            "mask-size": "100%"
-        });
     }
     connectedCallback() {
-        let name = $(this).attr("name");
-        if (name != undefined) {
+        let attr = $(this).attr("name");
+        if (attr == undefined)
+            attr = $(this).attr("title");
+        if (attr != undefined) {
+            let name = attr.toLowerCase().replace(/\s+/g, "");
+            if (!name.includes("."))
+                name += ".svg";
             let url = "url(" + this.iconsURL + name + ")";
             $(this).css({
                 "-webkit-mask-image": url,
