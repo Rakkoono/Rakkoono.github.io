@@ -21,9 +21,12 @@ function afterLoad() {
 }
 $(window).on("resize", updateContentSize);
 function updateContentSize() {
-    // Apply header width to top margin
     let minMargin = parseInt($("#content").css("--min-margin"));
-    $("#content").css("margin-top", $("#header").outerHeight() + minMargin + "px");
+    let headerHeight = $("#header-area").outerHeight();
+    // Apply header width to top margin
+    $("#content").css("margin-top", headerHeight + minMargin + "px");
+    // Offset page anchors by header height
+    $(".anchor").css("top", -headerHeight - 10);
     // Calculate width 
     let vw = $(window).innerWidth() / 100, percent = $("#content").parent().innerWidth() / 100;
     let maxWidth = 100 * percent - 2 * minMargin;
