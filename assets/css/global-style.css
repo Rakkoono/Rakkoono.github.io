@@ -49,31 +49,46 @@ p {
     font-family: var(--font-family);
 }
 
-hr {
-    color: var(--symbol-color);
-    margin: 5px;
-}
-
 /* Header */
 h1,
 h2,
 h3,
 h4 {
     color: var(--symbol-color);
-    font-variant: small-caps;
-    font-family: "Josefin Sans", sans-serif;
+    font-family: var(--font-family);
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
+
+/* Horizontal line*/
+hr {
+    color: var(--symbol-color);
+    margin: 5px;
+}
+
 
 /* Link */
 a:link,
 a:visited,
-a:hover,
 a:active {
     color: var(--highlight-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--highlight-color);
+    text-decoration: underline;
+}
+
+table, th, td {
+    padding: 5px 10px;
+    border-collapse: collapse;
+    border: 1px solid var(--symbol-color);
 }
 
 /* Simple Icons: src/utils/SimpleIcon.ts */
 simple-icon {
+    margin: 0 auto;
     position: relative;
     z-index: 1;
     display: block;
@@ -84,19 +99,53 @@ simple-icon {
     mask-size: "100%";
 }
 
+a > simple-icon {
+    background-color: var(--highlight-color);
+}
+
 /**=====================**/
 /** BY CLASS            **/
 /**=====================**/
 
 /* Alignment */
-.align-right {
+.text-right {
     text-align: right;
 }
-.align-left {
+.text-left {
     text-align: left;
 }
-.align-center {
+.text-center {
     text-align: center;
+}
+
+.el-right {
+    margin-left: auto;
+    margin-right: 0;
+}
+.el-left {
+    margin-left: 0;
+    margin-right: auto;
+}
+.el-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Full Size */
+.full-width {
+    width: 100%;
+}
+.full-height {
+    height: 100%;
+}
+.full-size {
+    width: 100%;
+    height: 100%;
+}
+
+/* Margin */
+.nomargin {
+    margin: 0;
 }
 
 /* Border */
@@ -149,17 +198,45 @@ simple-icon {
     flex-shrink: 1;
 }
 
+/* Font Size */
+
+.font-size-300pct {
+    font-size: 300%;
+}
+
+.font-size-125pct {
+    font-size: 125%;
+}
+
+.font-size-115pct {
+    font-size: 115%;
+}
+
 /* Whitespace Wrap */
 .nowrap {
     white-space: nowrap;
 }
 
+/* User Selectable */
+.nonselectable {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 /* Button */
 .btn {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
     color: var(--symbol-color);
     text-decoration: none;
     align-items: center;
     padding: 8px;
+    text-decoration: none;
 }
 a.btn:link,
 a.btn:visited,
@@ -168,12 +245,20 @@ a.btn:active {
 }
 a.btn:hover {
     color: var(--symbol-hover-color);
+    text-decoration: none;
 }
 
 /* Button /w Icon */
+a.btn:link > simple-icon,
+a.btn:visited > simple-icon,
+a.btn:active > simple-icon {
+    background-color: var(--symbol-color);
+}
+
 a.btn:hover > simple-icon {
     background-color: var(--symbol-hover-color);
 }
+
 
 /* Absolute position */
 .abs-left {
@@ -226,7 +311,7 @@ a.btn:hover > simple-icon {
 
 /* Logo Text: Rakkoon GAMES */
 .logo-text {
-    margin: 0 3px;
+    margin: 0;
     line-height: 1em;
     text-align: center;
 
@@ -249,24 +334,63 @@ a.btn:hover > simple-icon {
     font-variant: small-caps;
 }
 
+/* Page Anchors */
+.anchor {
+    display: block;
+    position: relative;
+    visibility: hidden;
+}
+
+/* Shadows */
+.text-shadow {
+    text-shadow: 1.2px 1.2px 2px var(--text-shadow-color);
+}
+
+/* Banners */
+.banner {
+    margin: -20px -20px auto -20px;
+}
+
 /**=====================**/
 /** BY ID               **/
 /**=====================**/
 
 /* Header */
-#header {
+#header-area {
     position: fixed;
     z-index: 100;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+
+    margin: 0;
+    border: 0;
+
+    width: 100%;
+}
+
+#header {
+    z-index: 3;
+    display: flex;
+    flex-flow: row wrap;
     align-items: center;
     justify-content: center;
     margin: 0;
     border: 0;
     padding: 1px;
-    height: auto;
-    width: 100%;
-    background-color: var(--header-color);
+    background-color: var(--header-background-color);
+    background-image: var(--header-background-image);
+    box-shadow: 0 2px 2px #0006;
+} 
+
+#nav-bar {
+    z-index: 2;
+    display: flex;
+    flex-flow: row wrap;
+    background-color: var(--nav-bar-background-color);
+    background-image: var(--nav-bar-background-image);
+    box-shadow: 0 5px 5px #0004;
+    align-items: stretch;
+    text-align: center;
 }
 
 /* Content */
@@ -288,4 +412,6 @@ a.btn:hover > simple-icon {
     background-size: cover;
     background-position: center;
     background-attachment: local;
+
+    box-shadow: var(--content-box-shadow);
 }

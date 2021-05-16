@@ -2,20 +2,24 @@
 
 :root {
     /* Colors: */
-    --header-color:             #214772;
     --background-color:         #13263d;
-    --content-background-color: var(--background-color);
 
+    --content-background-color: var(--background-color);
+    --header-background-color:  #214772;
+    --nav-bar-background-color: #295f9c;
+
+    --highlight-color:          #36b8e9;
     --symbol-color:             #b5d8e8;
     --symbol-hover-color:       #ffffff;
 
-    --highlight-color:          #36b8e9;
-    --highlight-hover-color:    #84d2ee;
+    --text-shadow-color:        #5d9ab6;
 
-    /* Fonts */
+    /* Fonts: */
     --font-family:              'Josefin Sans', sans-serif;
 
-    /* Images */
+    /* Images: */
     --background-image:         url(/assets/images/backgrounds/hexisles.png);
-    --content-background-image: none;
+
+    /* Shadows */
+    --content-box-shadow:       4px 4px 4px #0004, 1px 1px 4px #0004;
 }

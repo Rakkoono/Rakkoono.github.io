@@ -2,20 +2,21 @@
 
 :root {
     /* Colors: */
-    --header-color:             #722121;
     --background-color:         #3d1313;
-    --content-background-color: transparent;
 
+    --content-background-color: transparent;
+    --header-background-color:  #722121;
+    --nav-bar-background-color: #9c2929;
+
+    --highlight-color:          #e93636;
     --symbol-color:             #e8b5b5;
     --symbol-hover-color:       #ffffff;
 
-    --highlight-color:          #e93636;
-    --highlight-hover-color:    #ee8484;
+    --text-shadow-color:        #b65d5d;
 
-    /* Fonts */
+    /* Fonts: */
     --font-family:              'Josefin Sans', sans-serif;
 
-    /* Images */
-    --background-image:         none;
-    --content-background-image: none;
+    /* Images: */
+    /* [...] */ 
 }
