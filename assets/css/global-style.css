@@ -200,16 +200,12 @@ a > simple-icon {
 
 /* Font Size */
 
+.font-size-1000pct {
+    font-size: 1000%;
+}
+
 .font-size-300pct {
     font-size: 300%;
-}
-
-.font-size-125pct {
-    font-size: 125%;
-}
-
-.font-size-115pct {
-    font-size: 115%;
 }
 
 /* Whitespace Wrap */
@@ -320,6 +316,9 @@ a.btn:hover > simple-icon {
 }
 .logo-text > .btn {
     padding: 0;
+}
+.logo-text b {
+    font-size: 115%;
 }
 
 /* Inline Icons */
