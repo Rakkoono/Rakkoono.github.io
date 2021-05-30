@@ -50,14 +50,15 @@ p {
 }
 
 /* Header */
-h1,
-h2,
-h3,
-h4 {
+h1, h2, h3, h4, h5, h6 {
     color: var(--symbol-color);
     font-family: var(--font-family);
     margin-top: 10px;
     margin-bottom: 5px;
+}
+
+h5, h6 {
+    font-weight: normal;
 }
 
 /* Horizontal line*/
