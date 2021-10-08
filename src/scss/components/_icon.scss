@@ -1,0 +1,30 @@
+@mixin center-mask {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
+
+$simple-icons: ("discord", "github", "instagram", "itchdotio", "twitter");
+@each $icon in $simple-icons {
+    .simple-icon-#{$icon} {
+        mask-image: url("https://simpleicons.org/icons/#{$icon}.svg");
+        @include center-mask;
+    }
+}
+
+$icons: ("DownArrow");
+@each $icon in $icons {
+    .icon-#{$icon} {
+        mask-image: url("//img/icons/#{$icon}.png");
+        @include center-mask;
+    }
+}
+
+

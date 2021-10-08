@@ -1,0 +1,25 @@
+@use 'sass:string';
+@use 'abstracts' as *;
+
+// Add color classes
+@each $color, $shades in $colors {
+    .#{$color} {
+        @each $shade, $value in $shades {
+            --col-#{$shade}: var(--#{$color}-#{$shade});
+        }
+    }
+}
+
+// Add shade classes
+@each $shade in $shades {
+    // Remove % from lightness value
+    $shade: string.slice('#{$shade}', 1, -2);
+
+    // Apply color to text or background
+    .txt-col-#{$shade} { color: col($shade) !important; }
+    .bg-col-#{$shade} { background-color: col($shade) !important; }
+}
+
+@each $color, $value in $pride-flag {
+    .pride-flag-#{$color} { background-color: $value; }
+}

@@ -1,0 +1,5 @@
+// Shorthand var(--col-..., var(--primary-...)) -> col(...)
+@function col($shade)
+{
+    @return var(--col-#{$shade}, var(--primary-#{$shade}));
+}

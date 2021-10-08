@@ -1,0 +1,36 @@
+@use '../abstracts/' as *;
+
+:root {
+    // Fonts
+    --main-font: 'Raleway', sans-serif;
+    --header-font: 'Josefin Sans', sans-serif;
+
+    // Set section spacing
+    --section-spacing: 3.5rem;
+    @include min-screen(medium) {
+        --section-spacing: 7rem;
+    }
+
+    // Set colors from map
+    @each $color, $shades in $colors {
+        @each $shade, $value in $shades {
+            --#{$color}-#{$shade}: #{$value};
+        }
+    }
+
+    // set font size from map & screen-size
+    @each $screen-size, $font-sizes in $type-scale {
+        @if $screen-size == small {
+            @each $fs, $value in $font-sizes {
+                --fs-#{$fs}: #{$value};
+            }
+        }
+        @else {
+            @include min-screen(small) {
+                @each $fs, $value in $font-sizes {
+                    --fs-#{$fs}: #{$value};
+                }
+            }
+        }
+    }
+}

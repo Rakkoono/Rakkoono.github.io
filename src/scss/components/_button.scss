@@ -1,0 +1,24 @@
+@use "abstracts" as *;
+
+.btn {
+    $diameter: 4rem;
+    @include circle(col(40), #{$diameter});
+    box-shadow: col(20) 0 0 .3rem .2rem;
+    opacity: 0.75;
+    
+    margin: 0.5rem;
+    padding: 0.75rem;
+    border: none;
+
+    align-self: center;
+    
+    &:hover, &:focus {
+        @include circle(col(50), #{$diameter});
+        outline: none;
+        box-shadow: col(20) 0 0 .5rem .5rem;
+    }
+
+    * {
+        background-color: col(10);
+    }
+}

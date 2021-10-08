@@ -1,7 +1,7 @@
 {
   "name": "rakkoono.github.io",
   "version": "1.0.0",
-  "description": "Rakkoon Games Website",
+  "description": "",
   "main": "main.js",
   "repository": {
     "type": "git",
@@ -13,10 +13,18 @@
     "url": "https://github.com/Rakkoono/Rakkoono.github.io/issues"
   },
   "homepage": "https://github.com/Rakkoono/Rakkoono.github.io#readme",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
   "devDependencies": {
     "@types/jquery": "^3.5.5",
     "@types/node": "^15.0.2",
-    "typescript": "^4.2.4",
-    "express": "^4.17.1"
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.39.2",
+    "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "@iconfu/svg-inject": "^1.2.3"
   }
 }

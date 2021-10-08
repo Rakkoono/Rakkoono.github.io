@@ -1,0 +1,97 @@
+@use "abstracts" as *;
+
+* {
+    // this is a bad idea, but works for now
+    font-variation-settings: "wght" var(--font-weight, 375), "wdth" var(--font-width, 80);
+}
+
+body {
+    font-size: var(--fs-400);
+    font-family: var(--main-font);
+    color: var(--neutral-90);
+    letter-spacing: -0.5px;
+    
+    ::selection {
+        background: col(30);
+    }
+}
+
+
+h1,
+h2,
+h3,
+h4 {
+    --font-weight: 700;
+    --font-width: 80;
+    font-weight: normal;
+    font-stretch: 100%;
+    line-height: 1.2;
+    font-family: var(--header-font);
+    color: col(80);
+
+    &::selection {
+        color: col(90);
+        background: col(30);
+    }
+}
+
+h1 {
+    --font-weight: 900;
+    color: col(40);
+    
+    &::selection {
+        color: col(80);
+        background: col(30);
+    }
+}
+
+// This is setting the font-sizes
+// based on the ones in the abstract
+// folder, go there to make updates
+
+small,
+.text-small {
+    font-size: var(--fs-300);
+}
+
+b {
+    letter-spacing: .12rem;
+    font-weight: bolder;
+}
+strong {
+    --font-weight: 500;
+    font-weight: normal;
+}
+
+a {
+    color: col(40);
+    &::selection {
+        color: col(80);
+        background: col(30);
+    }
+
+    &:hover,
+    &:focus {
+        color: col(30);
+        text-decoration: none;
+    }
+}
+
+input {
+    &:hover, &:focus {
+        outline: none;
+        box-shadow: col(20) 0 0 .5rem .5rem;
+    }
+}
+
+p:not([class]),
+ul:not([class]),
+li:not([class]) {
+    max-width: 60ch;
+}
+
+hr {
+    color: col(80);
+    width: 100%;
+    margin: 1.25rem auto;
+}

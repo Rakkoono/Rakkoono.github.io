@@ -1,0 +1,10 @@
+@use "sass:string";
+@use "colors" as *;
+
+@keyframes fade-in-out {
+    0% { opacity: 0; z-index: 5; }
+    45% { opacity: 0; z-index: 5; }
+    50% { opacity: 1; z-index: 6; }
+    95% { opacity: 1; z-index: 6; }
+    100% { opacity: 0; z-index: 5; }
+}

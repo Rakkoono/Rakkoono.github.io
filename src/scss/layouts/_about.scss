@@ -1,0 +1,41 @@
+@use 'abstracts' as *;
+
+#about {
+    $diameter: 65vh;
+
+    // Center circle even when it's wider than the screen 
+    --diameter: #{$diameter};
+    left: calc((100vw - var(--diameter)) / 2);
+    @include min-screen(#{$diameter}) {
+        left: auto;
+    }
+
+    // Draw circle
+    @include circle(col(10), var(--diameter));
+    margin: 20vh auto 5vh auto;
+    box-shadow: col(5) 1px 1px 2px 2px;
+    position: relative;
+
+    > div {
+        animation-name: fade-in-out;
+        animation-duration: 12s;
+        animation-iteration-count: infinite;
+
+        position: absolute;
+
+        top: 1rem; 
+        bottom: 1rem;
+        right: 1rem;
+        left: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #en-tp {
+        animation-delay: 6s;
+    }
+}

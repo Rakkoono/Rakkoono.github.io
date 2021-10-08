@@ -1,0 +1,43 @@
+@use "sass:map";
+@use "sass:string";
+@use "sass:color";
+
+$colors: (
+    neutral: hsl(0, 0%, 40%),
+    primary: hsl(34, 100%, 40%),
+    pride-A: hsl(357, 100%, 50%),
+    pride-B: hsl(32, 100%, 56%),
+    pride-C: hsl(51, 100%, 50%),
+    pride-D: hsl(118, 100%, 33%),
+    pride-E: hsl(258, 100%, 30%),
+    pride-F: hsl(315, 100%, 27%),
+
+    card1: hsl(167, 100%, 40%),
+    card2: hsl(202, 100%, 40%),
+    card3: hsl(192, 100%, 40%),
+);
+
+$shades: (5%, 10%, 15%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90%);
+
+// Add all shades to color map
+@each $color, $value in $colors {
+    @each $shade in $shades {
+        // Apply lightness to color
+        $new-value: color.change($value, $lightness: $shade);
+        // Remove % from lightness value
+        $shade: string.slice("#{$shade}", 1, -2);
+        // Set $colors/COLOR/SHADE to NEW-VALUE (e.g. $colors/primary/40 to hsl(66, 100%, 40%))
+        $colors: map.set($colors, $color, $shade, $new-value);
+    }
+}
+
+$pride-flag: (
+    1: hsl(357, 100%, 50%),
+    2: hsl(32, 100%, 56%),
+    3: hsl(51, 100%, 50%),
+    4: hsl(118, 100%, 33%),
+    5: hsl(258, 100%, 30%),
+    6: hsl(315, 100%, 27%),
+);
+
+//* Original Pride Colors: #ff1e26, #fe941e, #ffff00, #06bd00, #001a98, #760088

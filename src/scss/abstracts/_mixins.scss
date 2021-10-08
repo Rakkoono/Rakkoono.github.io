@@ -1,0 +1,32 @@
+@use "breakpoints" as *;
+
+@mixin min-screen($key) {
+    $min-width: map-get($breakpoints, $key);
+    @if $min-width == null {
+        $min-width: $key;
+    }
+
+    @media only screen and (min-width: $min-width) {
+        @content;
+    }
+}
+
+@mixin triangle($color: black, $width: 200px, $height: 200px, $direction: bottom right) {
+    width: #{$width};
+    height: #{$height};
+    background: linear-gradient(
+    to #{$direction}, #0000 0%, #0000 50%, #{$color} 50%, #{$color} 100%);
+}
+
+@mixin circle($color: black, $width: 200px, $height: null) {
+    width: $width;
+    height: if($height == null, $width, $height);
+    background-color: $color;
+    border-radius: 50%;
+}
+
+@mixin hide-scrollbars {
+    -ms-overflow-style: none; // IE, Edge
+    scrollbar-width: none; // Firefox
+    ::-webkit-scrollbar { display: none; } // Chrome, Safari, Opera
+}

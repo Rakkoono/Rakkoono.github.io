@@ -1,0 +1,18 @@
+@use "sass:math";
+@use "abstracts" as *;
+
+#queer-anarchism-flag {
+    z-index: -5;
+    position: absolute;
+
+    div {
+        width: 100vw;
+        height: math.div(50vw, 6);
+    }
+
+    .triangle {
+        position: absolute;
+        top: 0;
+        @include triangle(black, 100vw, 50vw, bottom right);
+    }
+}
