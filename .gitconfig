@@ -1,0 +1,2 @@
+[alias]
+    publish-ghp = subtree push --prefix dist origin gh-pages

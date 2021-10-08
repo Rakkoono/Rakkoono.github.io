@@ -677,32 +677,14 @@ body {
   margin: 2vh 0;
   padding: 0 2rem;
 }
-
-.social-link {
-  width: 4rem;
-  height: 4rem;
-  background-color: var(--col-40, var(--primary-40));
-  border-radius: 50%;
-  box-shadow: var(--col-20, var(--primary-20)) 0 0 0.3rem 0.2rem;
-  opacity: 0.75;
-  margin: 0.5rem;
-  padding: 0.75rem;
-  border: none;
+.socials .btn {
+  opacity: 1;
 }
-.social-link:hover, .social-link:focus {
-  width: 4rem;
-  height: 4rem;
-  background-color: var(--col-50, var(--primary-50));
-  border-radius: 50%;
-  outline: none;
-  box-shadow: var(--col-20, var(--primary-20)) 0 0 0.5rem 0.5rem;
-  fill: white;
-}
-.social-link * {
+.socials .btn * {
   background-color: var(--col-10, var(--primary-10));
 }
 
-.icon-discord {
+.simple-icon-discord {
   mask-image: url("https://simpleicons.org/icons/discord.svg");
   margin: 0;
   height: 100%;
@@ -715,7 +697,7 @@ body {
   mask-repeat: no-repeat;
 }
 
-.icon-github {
+.simple-icon-github {
   mask-image: url("https://simpleicons.org/icons/github.svg");
   margin: 0;
   height: 100%;
@@ -728,7 +710,7 @@ body {
   mask-repeat: no-repeat;
 }
 
-.icon-instagram {
+.simple-icon-instagram {
   mask-image: url("https://simpleicons.org/icons/instagram.svg");
   margin: 0;
   height: 100%;
@@ -741,7 +723,7 @@ body {
   mask-repeat: no-repeat;
 }
 
-.icon-itchdotio {
+.simple-icon-itchdotio {
   mask-image: url("https://simpleicons.org/icons/itchdotio.svg");
   margin: 0;
   height: 100%;
@@ -754,7 +736,7 @@ body {
   mask-repeat: no-repeat;
 }
 
-.icon-twitter {
+.simple-icon-twitter {
   mask-image: url("https://simpleicons.org/icons/twitter.svg");
   margin: 0;
   height: 100%;
@@ -765,6 +747,43 @@ body {
   mask-position: center;
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
+}
+
+.icon-DownArrow {
+  mask-image: url("/DownArrow.ccb624f6.png");
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+.btn {
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--col-40, var(--primary-40));
+  border-radius: 50%;
+  box-shadow: var(--col-20, var(--primary-20)) 0 0 0.3rem 0.2rem;
+  opacity: 0.75;
+  margin: 0.5rem;
+  padding: 0.75rem;
+  border: none;
+  align-self: center;
+}
+.btn:hover, .btn:focus {
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--col-50, var(--primary-50));
+  border-radius: 50%;
+  outline: none;
+  box-shadow: var(--col-20, var(--primary-20)) 0 0 0.5rem 0.5rem;
+}
+.btn * {
+  background-color: var(--col-10, var(--primary-10));
 }
 
 #about {

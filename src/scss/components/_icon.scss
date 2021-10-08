@@ -22,7 +22,7 @@ $simple-icons: ("discord", "github", "instagram", "itchdotio", "twitter");
 $icons: ("DownArrow");
 @each $icon in $icons {
     .icon-#{$icon} {
-        mask-image: url("//img/icons/#{$icon}.png");
+        mask-image: url("/img/icons/#{$icon}.png");
         @include center-mask;
     }
 }
